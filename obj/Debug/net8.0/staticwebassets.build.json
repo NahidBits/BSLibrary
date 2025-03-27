@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uMo9PKKjrb2woBxR4Y1o5kiCgxGLAaGMI8LncCL+dDc=",
+  "Hash": "OhVq777xpNZBh63dJiHL5K5emFIsmt756rmZtDUfXWE=",
   "Source": "BSLibrary",
   "BasePath": "_content/BSLibrary",
   "Mode": "Default",
@@ -16,6 +16,48 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BSLibrary.styles.css",
+      "SourceId": "BSLibrary",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/BSLibrary",
+      "RelativePath": "BSLibrary#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "hcv6wa0xii",
+      "Integrity": "z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BSLibrary.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BSLibrary.bundle.scp.css",
+      "SourceId": "BSLibrary",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/BSLibrary",
+      "RelativePath": "BSLibrary#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "hcv6wa0xii",
+      "Integrity": "z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BSLibrary.bundle.scp.css"
+    },
     {
       "Identity": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\wwwroot\\css\\site.css",
       "SourceId": "BSLibrary",
@@ -1278,6 +1320,170 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "BSLibrary.bundle.scp.css",
+      "AssetFile": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BSLibrary.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 04:37:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0="
+        }
+      ]
+    },
+    {
+      "Route": "BSLibrary.hcv6wa0xii.bundle.scp.css",
+      "AssetFile": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BSLibrary.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 04:37:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcv6wa0xii"
+        },
+        {
+          "Name": "label",
+          "Value": "BSLibrary.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0="
+        }
+      ]
+    },
+    {
+      "Route": "BSLibrary.hcv6wa0xii.styles.css",
+      "AssetFile": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BSLibrary.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 04:37:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcv6wa0xii"
+        },
+        {
+          "Name": "label",
+          "Value": "BSLibrary.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0="
+        }
+      ]
+    },
+    {
+      "Route": "BSLibrary.styles.css",
+      "AssetFile": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BSLibrary.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 04:37:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z1PsGNL/aGrQ4LCjmWxqUBrdkg0nvYbABx1iDDK44V0="
+        }
+      ]
+    },
     {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\BS00885\\source\\repos\\BSLibrary\\wwwroot\\css\\site.css",

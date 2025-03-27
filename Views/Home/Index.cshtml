@@ -1,37 +1,42 @@
-﻿@model IEnumerable<BSLibrary.Models.TaskItem>
+﻿@model List<Book>
 
 @{
-    Layout = "_Layout";
     ViewData["Title"] = "Home Page";
 }
 
 <h1>@ViewData["Message"]</h1>
-<br/>
+<br />
 
+<!-- Link to Add New Book -->
+<a class="nav-link" href="/Create">Add New Book</a>
+<br />
 
-<a class="nav-link" href="/Create">Create a Task</a>
-<br/>
-
-<!-- Table of tasks -->
+<!-- Table of Books -->
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Id</th>
             <th>Title</th>
-            <th>Description</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Published Date</th>
+            <th>ISBN</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var task in Model)
+        @foreach (var book in Model)
         {
             <tr>
-                <td>@task.Id</td>
-                <td>@task.Title</td>
-                <td>@task.Description</td>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td>@book.PublishedDate.ToShortDateString()</td> 
+                <td>@book.ISBN</td>
                 <td>
-                    <a class="btn btn-sm btn-warning" href="/Home/Edit/@task.Id">Edit</a>
-                    <a class="btn btn-sm btn-danger" href="/Home/Delete/@task.Id">Delete</a>
+                    <a class="btn btn-sm btn-warning" href="/Home/Edit/@book.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" href="/Home/Delete/@book.Id">Delete</a>
                 </td>
             </tr>
         }

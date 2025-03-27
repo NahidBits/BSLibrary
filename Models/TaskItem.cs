@@ -1,4 +1,6 @@
-﻿namespace BSLibrary.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BSLibrary.Models
 {
     public class TaskItem
     {

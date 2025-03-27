@@ -30,3 +30,6 @@ C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\refint\BSLibrary.dll
 C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\BSLibrary.pdb
 C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\BSLibrary.genruntimeconfig.cache
 C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\ref\BSLibrary.dll
+C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\BSLibrary.sourcelink.json
+C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\BS00885\source\repos\BSLibrary\obj\Debug\net8.0\scopedcss\projectbundle\BSLibrary.bundle.scp.css

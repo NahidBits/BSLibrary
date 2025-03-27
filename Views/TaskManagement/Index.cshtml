@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BSLibrary.Models.TaskItem>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@ViewData["Message"]</h1>
+<br/>
+
+
+<a class="nav-link" href="/Create">Create a Task</a>
+<br/>
+
+<!-- Table of tasks -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Id</td>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" href="/Home/Edit/@task.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" href="/Home/Delete/@task.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

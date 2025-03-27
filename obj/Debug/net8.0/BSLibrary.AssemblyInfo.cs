@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BSLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab916eb29faabd38996694df1025e29affeebc8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BSLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BSLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

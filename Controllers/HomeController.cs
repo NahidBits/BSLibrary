@@ -1,28 +1,30 @@
 using System.Diagnostics;
+using BSLibrary.Database;
 using BSLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace BSLibrary.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly MemoryDatabase _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(MemoryDatabase db)
         {
-            _logger = logger;
+            _db = db;
         }
-
-        private static List<TaskItem> _tasks = new List<TaskItem>
-        {
-            new TaskItem { Id = 1, Title = "First Task", Description = "This is the first task" },
-            new TaskItem { Id = 2, Title = "Second Task", Description = "This is the second task" }
-        };
 
         public IActionResult Index()
         {
             ViewData["Message"] = "Welcome to our Website";
-            return View(_tasks);
+            var books = _db.Get();
+            return View(books);
+        }
+
+        public ActionResult Details(int id)
+        {
+            return View();
         }
 
         public IActionResult Create()
@@ -30,58 +32,54 @@ namespace BSLibrary.Controllers
             return View();
         }
 
-
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(TaskItem task)
+        //  [ValidateAntiForgeryToken]
+        public IActionResult Create(Book book)
         {
             if (ModelState.IsValid)
             {
-                task.Id = _tasks.Count > 0 ? _tasks.Max(t => t.Id) + 1 : 1;
-                _tasks.Add(task);
+                _db.Add(book);
                 return RedirectToAction("Index");
             }
-            return View(task);
+            return View(book);
         }
-        
+
         public IActionResult Edit(int id)
         {
-            var task = _tasks.FirstOrDefault(t => t.Id == id);
-            if (task == null)
+            var book = _db.Get(id);
+            if (book == null)
             {
                 return NotFound();
             }
-            return View(task);
+            return View(book);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit( TaskItem task)
+        public IActionResult Edit(Book book)
         {
             if (ModelState.IsValid)
             {
-                var existingTask = _tasks.FirstOrDefault(t => t.Id == task.Id);
-                if (existingTask == null)
+                var existingbook = _db.Get(book.Id);
+                if (existingbook == null)
                 {
                     return NotFound();
                 }
-                existingTask.Title = task.Title;
-                existingTask.Description = task.Description;
 
+                _db.Update(book);
                 return RedirectToAction("Index");
             }
-            return View(task);
+            return View(book);
         }
-        
         public IActionResult Delete(int id)
         {
-            var task = _tasks.FirstOrDefault(t => t.Id == id);
-            if (task == null)
+            var book = _db.Get(id);
+            if (book == null)
             {
                 return NotFound();
-            }else
+            }
+            else
             {
-                _tasks.Remove(task);
+                _db.Remove(book);
             }
             return RedirectToAction("Index");
         }
