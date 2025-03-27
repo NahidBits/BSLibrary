@@ -26,17 +26,18 @@
     </nav>
 
     <div class="container mt-4">
-        @RenderBody()  <!-- This is where the content of each view will be injected -->
+        @RenderBody()  <!-- Main content -->
     </div>
 
-    <footer class="bg-light text-center py-3 mt-4">
+    <footer class="bg-light text-center py-3 footer">
         <p>&copy; 2025 My ASP.NET Core MVC App</p>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Render the Scripts section (if defined) -->
-    @RenderSection("Scripts", required: false) <!-- This line allows rendering the 'Scripts' section if it exists -->
+    @RenderSection("Scripts", required: false)
 </body>
+
+
 </html>

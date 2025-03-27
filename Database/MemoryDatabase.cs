@@ -31,9 +31,11 @@ namespace BSLibrary.Database
         {
             return db.FirstOrDefault(t => t.Id == Id);
         }
-        public void Add(Book task)
+        public void Add(Book book)
         {
-            db.Add(task);
+            int maxId = db.Any() ? db.Max(b => b.Id) : 0;
+            book.Id = maxId + 1;
+            db.Add(book);
         }
 
         public void Remove(Book trainee)

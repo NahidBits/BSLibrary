@@ -33,7 +33,7 @@ namespace BSLibrary.Controllers
         }
 
         [HttpPost]
-        //  [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Book book)
         {
             if (ModelState.IsValid)
@@ -55,6 +55,7 @@ namespace BSLibrary.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(Book book)
         {
             if (ModelState.IsValid)
