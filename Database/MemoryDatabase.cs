@@ -54,6 +54,7 @@ namespace BSLibrary.Database
                 bookToUpdate.Genre = book.Genre;
                 bookToUpdate.PublishedDate = book.PublishedDate;
                 bookToUpdate.ISBN = book.ISBN;
+                bookToUpdate.UpdatedAt = DateTime.Now;  
             }
         }
     }

@@ -17,14 +17,18 @@ namespace BSLibrary.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Message"] = "Welcome to our Website";
+            ViewData["Message"] = "Welcome to our BS Library Mangement";
             var books = _db.Get();
             return View(books);
         }
-
         public ActionResult Details(int id)
         {
-            return View();
+            var book = _db.Get(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+            return View(book);
         }
 
         public IActionResult Create()

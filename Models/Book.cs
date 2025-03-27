@@ -23,5 +23,7 @@ namespace BSLibrary.Models
         [Required]
         [StringLength(13)]
         public string ISBN { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime? UpdatedAt { get; set; } = null;
     }
 }

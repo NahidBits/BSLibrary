@@ -31,12 +31,3 @@ body {
     flex: 1; /* Pushes footer down */
 }
 
-.footer {
-    position: fixed; /* Always stays at the bottom */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    text-align: center;
-}

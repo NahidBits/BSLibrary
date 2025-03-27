@@ -1,0 +1,43 @@
+﻿@model Book
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<h1 class="mb-4">@Model.Title</h1>
+
+<!-- Book Details -->
+<div class="mb-3">
+    <strong>Author:</strong> @Model.Author
+</div>
+<div class="mb-3">
+    <strong>Genre:</strong> @Model.Genre
+</div>
+<div class="mb-3">
+    <strong>Published Date:</strong> @Model.PublishedDate.ToShortDateString()
+</div>
+<div class="mb-3">
+    <strong>ISBN:</strong> @Model.ISBN
+</div>
+<div class="mb-3">
+    <strong>Created At:</strong> @Model.CreatedAt.ToShortDateString()
+</div>
+<div class="mb-3">
+    <strong>Updated At:</strong> @(Model.UpdatedAt.HasValue ? Model.UpdatedAt.Value.ToShortDateString() : "Not Updated")
+</div>
+
+
+<a class="btn btn-primary" href="@Url.Action("Index", "Home")">Back to List</a>
+<a class="btn btn-warning" href="@Url.Action("Edit", "Home", new { id = Model.Id })">Edit</a>
+
+
+<button class="btn btn-danger" onclick="confirmDelete(@Model.Id)">Delete</button>
+
+
+<script>
+    function confirmDelete(bookId) {
+        if (confirm("Are you sure you want to delete this book?")) {
+            window.location.href = "/Home/Delete/" + bookId;
+        }
+    }
+</script>

@@ -4,16 +4,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>@ViewData["Message"]</h1>
-<br />
+<h3 class="mb-4">@ViewData["Message"]</h3>
 
-<!-- Link to Add New Book -->
-<a class="nav-link" href="/Home/Create">Add New Book</a>
-<br />
+<!-- Add New Book Button -->
+<a class="btn btn-primary mb-3" href="@Url.Action("Create", "Home")">Add New Book</a>
 
 <!-- Table of Books -->
-<table class="table table-striped">
-    <thead>
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
         <tr>
             <th>Id</th>
             <th>Title</th>
@@ -32,13 +30,22 @@
                 <td>@book.Title</td>
                 <td>@book.Author</td>
                 <td>@book.Genre</td>
-                <td>@book.PublishedDate.ToShortDateString()</td> 
+                <td>@book.PublishedDate.ToShortDateString()</td>
                 <td>@book.ISBN</td>
                 <td>
-                    <a class="btn btn-sm btn-warning" href="/Home/Edit/@book.Id">Edit</a>
-                    <a class="btn btn-sm btn-danger" href="/Home/Delete/@book.Id">Delete</a>
+                    <a class="btn btn-sm btn-warning" href="@Url.Action("Edit", "Home", new { id = book.Id })">Edit</a>
+                    <a class="btn btn-sm btn-info" href="@Url.Action("Details", "Home", new { id = book.Id })">Details</a>
+                    <button class="btn btn-sm btn-danger" onclick="confirmDelete(@book.Id)">Delete</button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<script>
+    function confirmDelete(bookId) {
+        if (confirm("Are you sure you want to delete this book?")) {
+            window.location.href = "/Home/Delete/" + bookId;
+        }
+    }
+</script>
